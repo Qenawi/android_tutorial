@@ -24,7 +24,7 @@ allprojects {
     }
 }
 ext {
-    supportLibrayVersion = '27.1.0'
+    supportLibrayVersion = '28.0.0'
     constraintLayoutVersion = '1.0.2'
     configuration = [
 

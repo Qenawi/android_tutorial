@@ -19,9 +19,9 @@ public class activity extends AppCompatActivity implements OnMapReadyCallback {
     Marker start, end, animate;
 
     /**
-     *
      * sRC
      * https://www.oodlestechnologies.com/blogs/How-to-smoothly-move-and-rotate-a-marker-in-google-map
+     *
      * @param
      */
     @Override
@@ -40,10 +40,15 @@ public class activity extends AppCompatActivity implements OnMapReadyCallback {
         LatLng startpos = new LatLng(-35.016, 143.321);
         LatLng endpos = new LatLng(-32.491, 147.309);
         googleMap.setMinZoomPreference(4f);
-
+        /*
+custom map info window
+         */
+        CustomInfoWindowAdapter customInfoWindowAdapter=new CustomInfoWindowAdapter(this);
+        googleMap.setInfoWindowAdapter(customInfoWindowAdapter);
 
         start = googleMap.addMarker(new MarkerOptions().position(startpos)
-                .title("Start"));
+                .title("Start").snippet("LONG Text ASDASDASDasdasdasd")
+        );
         animate = googleMap.addMarker(new MarkerOptions().position(startpos)
                 .title("anmiation").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
         end = googleMap.addMarker(new MarkerOptions().position(endpos)
@@ -59,12 +64,11 @@ public class activity extends AppCompatActivity implements OnMapReadyCallback {
 
 
         googleMap.animateCamera(CameraUpdateFactory.newLatLng(startpos));
-        moveVechile(animate,endpos);
+        moveVechile(animate, endpos);
 
     }
 
-    public void moveVechile(final Marker myMarker, final LatLng finalPosition)
-    {
+    public void moveVechile(final Marker myMarker, final LatLng finalPosition) {
 
         final LatLng startPosition = myMarker.getPosition();
 
