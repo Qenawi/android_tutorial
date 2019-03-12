@@ -3,6 +3,9 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
+    dataBinding {
+        enabled = true
+    }
     compileSdkVersion 28
     defaultConfig {
         applicationId "qenawi.panda.android_tutorial"
@@ -35,4 +38,12 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+
+    // main Sdk  Path
+    implementation 'com.mapbox.mapboxsdk:mapbox-android-sdk:7.1.2'
+    //  Nav Path To Draw The route between 2 points
+    implementation 'com.mapbox.mapboxsdk:mapbox-android-navigation-ui:0.30.0'
+    // Custom copy Of Google Map Utile But for MapBox
+    implementation 'com.github.mastrgamr:mapbox-android-utils:v0.3'
 }

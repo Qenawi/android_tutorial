@@ -20,6 +20,12 @@ allprojects {
     repositories {
         google()
         jcenter()
+        // util path
+        maven { url "https://jitpack.io" }
+        // nav Sdk
+        maven { url 'https://mapbox.bintray.com/mapbox' }
+
+
 
     }
 }

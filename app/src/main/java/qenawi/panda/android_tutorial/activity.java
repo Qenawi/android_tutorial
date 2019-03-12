@@ -15,7 +15,8 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.*;
 
-public class activity extends AppCompatActivity implements OnMapReadyCallback {
+public class activity extends AppCompatActivity implements OnMapReadyCallback
+{
     Marker start, end, animate;
 
     /**
@@ -25,7 +26,8 @@ public class activity extends AppCompatActivity implements OnMapReadyCallback {
      * @param
      */
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.maps1);
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
