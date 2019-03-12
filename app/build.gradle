@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-
+def root = rootProject.ext;
 android {
     dataBinding {
         enabled = true
@@ -39,6 +39,9 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
+    implementation root.reactiveDependencies.rxandroid
+    implementation root.reactiveDependencies.rxjava
+
 
     // main Sdk  Path
     implementation 'com.mapbox.mapboxsdk:mapbox-android-sdk:7.1.2'
@@ -46,4 +49,6 @@ dependencies {
     implementation 'com.mapbox.mapboxsdk:mapbox-android-navigation-ui:0.30.0'
     // Custom copy Of Google Map Utile But for MapBox
     implementation 'com.github.mastrgamr:mapbox-android-utils:v0.3'
+
+
 }

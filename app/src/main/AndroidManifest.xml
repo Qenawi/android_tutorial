@@ -18,6 +18,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".mvc_pattern_tutorial.MvcView"/>
         <meta-data
                 android:name="com.google.android.geo.API_KEY"
                 android:value="AIzaSyANLskwqWyFkfNcfLZtao6eFCi--z3Kwz8"/>
