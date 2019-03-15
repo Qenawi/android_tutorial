@@ -14,7 +14,8 @@ public class MvcView extends AppCompatActivity implements MvcControler.ViewToCon
     private MvcControler mvcControler;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         // set content view
         // init Controller
@@ -22,11 +23,10 @@ public class MvcView extends AppCompatActivity implements MvcControler.ViewToCon
         // On Click Listener
         mvcControler.fetchMovies();
     }
-
-
     @Override
-    public void notifyView() {
+    public void notifyView()
+    {
         ArrayList<String> data =
                 mvcControler.getMovieList();
     }
-}
+    }

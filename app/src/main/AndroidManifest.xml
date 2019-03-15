@@ -19,6 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".mvc_pattern_tutorial.MvcView"/>
+        <activity android:name=".mvp_pattern_tuttorial.Mvp_view"/>
         <meta-data
                 android:name="com.google.android.geo.API_KEY"
                 android:value="AIzaSyANLskwqWyFkfNcfLZtao6eFCi--z3Kwz8"/>
